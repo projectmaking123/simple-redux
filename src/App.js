@@ -11,22 +11,19 @@ const initalState = {
 const counterReducer = (state = initalState, action) => {
   switch (action.type) {
     case 'up':
-      return {
-        ...state,
+      return Object.assign({}, state, {
         count: state.count + 1
-      }
+      })
     case 'down':
-      return {
+      return Object.assign({}, state, {
         count: state.count - 1
-      }
+      })
     default:
       return state;
   }
 }
 
 const store = createStore(counterReducer);
-
-
 
 class App extends Component {
   render() {

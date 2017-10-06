@@ -7,8 +7,7 @@ class Thing extends Component {
       <div>
         <h1>{this.props.count}</h1>
         <button onClick={()=> this.props.dispatch({type: "up"})}>Up</button>
-        <button onClick={()=> this.props.dispatch({type: "down"})}>Up</button>
-
+        <button onClick={()=> this.props.dispatch({type: "down"})}>Down</button>
       </div>
     )
   }
